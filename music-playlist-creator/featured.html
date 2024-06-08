@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="featured-page">
+    <header class="header">
+        <h1>Featured Playlist</h1>
+    </header>
+
+    <main>
+       <button class="ref-button"><a href="index.html">Full Playlist</a></button>
+        <div class="random-playlist">
+            <div class="playlist-details">
+                <img src="${playlist.cover_art}" alt="">
+                <h3>${playlist.name}</h3>
+                <h4>${playlist.creator}</h4>
+            </div>
+            <div class="playlist-songs">
+                <ul>
+                    <li class="song-list">
+                        <img src="${song.cover_art}" alt="">
+                        <h4>${song.title}</h4>
+                        <p class="artist-name">${song.artist}</p>
+                        <p class="album-name">${song.album}</p>
+                        <p>${song.duration}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script src="./data/data.js"></script>
+    <script src="featured.js"></script>
+    <footer><b>&#169 Created by Ahemed Summer 2024</b></footer>
+
+</body>
+</html>

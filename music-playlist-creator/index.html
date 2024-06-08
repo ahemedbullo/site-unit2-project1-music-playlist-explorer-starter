@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Music Playlist Explorer</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Music Playlist Explorer</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <!-- Your header content here -->
-    </header>
+<header class="header">
+<!-- Your header content here -->
+<h1>Music Playlist Explorer</h1>
+</header>
 
-    <main> 
-        <!-- Your main content here -->
-    </main>
+<main>
+    <button class="ref-button"><a href="featured.html">Featured Playlist</a></button>
+<!-- Your main content here -->
+<div class="playlist-cards">
+    <div class="card-item">
+    <img src="./assets/img/playlist.png" alt="playlist image">
+    <h3>Playlist Name</h3>
+    <h4>Artist Name</h4>
+    <p>Like Count:</p>
+    </div>
+</div>
 
-    <footer>
-        <!-- Your footer content here -->
-    </footer>
-    <script src="data/data.js"></script>
-    <script src="script.js"></script>
+</main>
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Playlist Name</h3>
+        <p>creator Name</p>
+        <div class="songs">
+        <ul class="song-list">
+        <li>
+        <img src="" alt="">
+        <h4>Song Title</h4>
+        <p class="artist-name">Artist Name</p>
+        <p class="album-name">Album Name</p>
+        <p class="duration">00:00</p>
+        </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<footer>
+<!-- Your footer content here -->
+</footer>
+<script src="data/data.js"></script>
+<script src="script.js"></script>
+<footer><b>&#169 Created by Ahemed Summer 2024</b></footer>
 </body>
+
 </html>

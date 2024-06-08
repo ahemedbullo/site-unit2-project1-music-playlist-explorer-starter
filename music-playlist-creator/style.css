@@ -1,6 +1,242 @@
-body {
+body,
+.featured-page{
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #121212;
+    color: #FFFFFF;
+}
+.ref-button{
+    background-color:#FF4500;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+}
+.header,
+.featured-page .header {
+    background-color: #1F1F1F;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #FFFFFF;
+    border-bottom: 2px solid #FF4500;
+}
+
+footer,
+.featured-page footer
+{
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #1F1F1F;
+    padding: 10px;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-top: 2px solid #FF4500;
+}
+
+.playlist-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-item {
+    flex-basis: calc(25% - 20px);
+    background-color: #2C2C2C;
+    border: 1px solid #3E3E3E;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-item img {
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid #3E3E3E;
+}
+
+.card-item h3, .card-item h4, .card-item .like-section {
+    margin: 10px;
+}
+
+.card-item h3 {
+    font-size: 20px;
+    color: #FF4500;
+}
+
+.card-item h4 {
+    font-size: 16px;
+    color: #CCCCCC;
+}
+
+.like-section {
+    display: flex;
+    align-items: center;
+    margin-top: auto; 
+}
+
+.like-button {
+    background-color: transparent;
+    border: none;
+    color: #FF4500;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.like-button.liked {
+    color: #FF0000;
+}
+
+.like-count {
+    font-size: 14px;
+    color: #CCCCCC;
+    margin-left: 5px;
+}
+
+.delete-button {
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px; 
+}
+
+/* Modal Styles */
+.modal-overlay {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.modal-content {
+    text-align: left;
+    background-color: #2C2C2C;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #FF4500;
+    width: 70%; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    align-items: center;
+}
+
+.modal-content .playlist-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-content .playlist-info h3, .modal-content .playlist-info h4 {
+    margin: 0;
+}
+
+.close {
+    color: #FFFFFF;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #FF4500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-overlay-show {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.song-list {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #3E3E3E;
+    justify-content: space-between; 
+}
+
+.song-list img {
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+
+.song-list h4 {
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 0;
+    flex: 1; 
+}
+
+.shuffle-button{
+    background-color: #FF4500;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.artist-name, .album-name, .song-list p {
+    font-size: 14px;
+    color: #CCCCCC;
+    margin: 0;
+    margin-left: 10px;
+    flex: 1; 
+}
+
+.artist-name::before, .album-name::before {
+    margin-right: 5px;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* Featured Page Styling */
+
+/* This will be for the card item */
+.featured-page .song-list{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    
+}
+
+
+.featured-page .artist-name,.featured-page .album-name,.featured-page  .song-list p {
+    font-size: 14px;
+    color: #CCCCCC;
+    margin: 0;
+    margin-left: 10px;
+    flex: 1; 
 }
